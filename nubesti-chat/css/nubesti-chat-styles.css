@@ -1,0 +1,101 @@
+/* Estilos globales para el botón de chat */
+.nubesti-chat-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: fixed;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Asegúrate de que el botón esté sobre otros elementos */
+}
+
+/* Estilos para el diseño predeterminado (botón de WhatsApp) */
+.nubesti-chat-button.nubesti-chat-default {
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.nubesti-chat-button.nubesti-chat-default::before {
+    content: url('../assets/whatsapp-icon.svg');
+}
+
+/* Estilos para el diseño minimalista */
+.nubesti-chat-button.nubesti-chat-minimal {
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.nubesti-chat-button.nubesti-chat-minimal::before {
+    content: '\260E';
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para el diseño moderno */
+.nubesti-chat-button.nubesti-chat-modern {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.nubesti-chat-button.nubesti-chat-modern::before {
+    content: '\260E';
+    font-family: 'Arial', sans-serif;
+}
+
+.nubesti-chat-button.nubesti-chat-modern:hover {
+    background-color: #367C2B;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos responsivos para pantallas pequeñas (por ejemplo, móviles) */
+@media (max-width: 600px) {
+    .nubesti-chat-button {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .nubesti-chat-button.nubesti-chat-default,
+    .nubesti-chat-button.nubesti-chat-minimal {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nubesti-chat-button.nubesti-chat-modern {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+/* Estilos para tabletas y otros dispositivos con pantallas de tamaño intermedio */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .nubesti-chat-button {
+        font-size: 22px;
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .nubesti-chat-button.nubesti-chat-default,
+    .nubesti-chat-button.nubesti-chat-minimal {
+        width: 45px;
+        height: 45px;
+    }
+
+    .nubesti-chat-button.nubesti-chat-modern {
+        padding: 9px 14px;
+        font-size: 18px;
+    }
+}
